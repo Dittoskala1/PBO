@@ -1,0 +1,24 @@
+@startuml
+class AlatTulis {
+    - nama: String
+    - stok: int
+    - hargaSatuan: int
+    - harga: int
+
+    + setNama(nama: String)
+    + setStok(stok: int)
+    + setHargaSatuan(hargaSatuan: int)
+    + getNama(): String
+    + getStok(): int
+    + getHargaSatuan(): int
+    + getHarga(): int
+    + hitungTotalHarga(): int
+}
+
+class Main {
+    + main()
+}
+
+AlatTulis "1" -- "1" Main
+
+@enduml

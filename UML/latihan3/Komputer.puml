@@ -1,0 +1,59 @@
+@startuml
+abstract class Komputer {
+    + abstract void hidupkan_os()
+    + abstract void matikan_os()
+}
+
+
+class PC {
+    + void hidupkan_os()
+    + void matikan_os()
+    + void klik_kanan()
+    + void klik_kiri()
+    + void tekan_enter()
+    + void cetak_data()
+}
+
+class Laptop {
+    + void hidupkan_os()
+    + void matikan_os()
+    + void klik_kanan()
+    + void klik_kiri()
+    + void tekan_enter()
+    + void cetak_data()
+}
+
+class Netbook {
+    + void hidupkan_os()
+    + void matikan_os()
+    + void klik_kanan()
+    + void klik_kiri()
+    + void tekan_enter()
+    + void cetak_data()
+}
+
+class KomputerCetak {
+    + final void cetak(Komputer[] obj)
+}
+
+interface Mouse {
+    + void klik_kanan()
+    + void klik_kiri()
+}
+
+interface Keyboard {
+    + void tekan_enter()
+}
+
+interface Printer {
+    + void cetak_data()
+}
+
+
+
+
+Komputer <|-- PC
+Komputer <|-- Laptop
+Komputer <|-- Netbook
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+
+class Shoe {
+    - String name
+    - int size
+    - int stock
+    - int unitPrice
+    - int totalPrice
+    --
+    + void setName(String name)
+    + void setSize(int size)
+    + void setStock(int stock)
+    + void setUnitPrice(int unitPrice)
+    + String getName()
+    + int getSize()
+    + int getStock()
+    + int getUnitPrice()
+    + int getTotalPrice()
+    + String getStockStatus()
+    + static int calculateTotalEarnings(Shoe[] shoeList)
+    - void calculateTotalPrice()
+}
+
+class Main {
+    + void main(String[] args)
+}
+
+Main --> Shoe : uses
+
+@enduml
